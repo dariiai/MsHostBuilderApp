@@ -1,0 +1,31 @@
+name: build-project
+on: [push]
+
+jobs:
+    run_dotnet_build:
+      name: Build Application
+      runs-on: ubuntu-latest
+      steps:
+         
+      - name: setup-dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.100'
+  
+      - name: checkout-repo
+        uses: actions/checkout@v2
+        with:
+          clean: 'true'
+
+      - name: print-directory 
+          run: ls -la
+
+    #   - name: echo-things
+    #     run: echo '$GITHUB_RUN_ID - $GITHUB_REF - $GITHUB_RUN_NUMBER - $GITHUB_EVENT_NAME'
+        #run: echo ' ${{github.workspace}} - ${{github.run_id}} - ${{github.run_number}}'
+  
+      - name: build it
+        run: dotnet build --nologo
+  
+ 
+  
