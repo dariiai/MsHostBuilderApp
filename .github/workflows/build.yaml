@@ -25,7 +25,7 @@ jobs:
         #run: echo ' ${{github.workspace}} - ${{github.run_id}} - ${{github.run_number}}'
   
       - name: build it
-        run: dotnet build --nologo
+        run: dotnet build --nologo MsHostBuilderApp.sln
   
  
   
