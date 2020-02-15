@@ -1,4 +1,6 @@
-﻿namespace MsHostBuilderApp
+﻿using System.Threading.Tasks;
+
+namespace MsHostBuilderApp
 {
     public class Game
     {
@@ -13,8 +15,10 @@
             Enemy = enemy;
         }
 
-        public void Start()
+        public async Task Start()
         {
+            await Task.CompletedTask;
+
             Weapon.Strike(Enemy);
         }
 
