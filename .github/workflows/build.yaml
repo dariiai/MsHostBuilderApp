@@ -18,7 +18,7 @@ jobs:
           clean: 'true'
 
       - name: print-directory 
-          run: ls -la
+        run: ls -la
 
     #   - name: echo-things
     #     run: echo '$GITHUB_RUN_ID - $GITHUB_REF - $GITHUB_RUN_NUMBER - $GITHUB_EVENT_NAME'
